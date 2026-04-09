@@ -36,17 +36,17 @@ public class Form extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 Deque<Integer> intDeque = tableToSimpleDeque(tableInput);
-                Deque<Integer> res = TaskLogic.solve(intDeque);
-                dequeToTable(res);
-
+                TaskLogic.solve(intDeque);
+                dequeToTable(intDeque);
             }
         });
+
         buttonDequeReverse.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Deque<Integer> intDeque = tableToDeque(tableInput);
-                Deque<Integer> res = TaskLogic.solve(intDeque);
-                dequeToTable(res);
+                TaskLogic.solve(intDeque);
+                dequeToTable(intDeque);
             }
         });
     }
